@@ -1,28 +1,27 @@
-#include <main.h>
+#include "main.h"
 
 /**
- * jack_bauer - prinyts time
- * 
- * Description: Prints a lsit odf time
- * Return: Always 0
-*/
+ * jack_bauer - prints time
+ *
+ * Description: prints a list of time
+ * Return: Always 0.
+ */
 
 void jack_bauer(void)
 {
-    int a, b;
+	int i, j;
 
-   for (a = 0; a < 24; a++)
-   {
-    for (b = 0; b < 60; b++)
-    {
-        _putchar(i / 10 + 48);
-        _putchar(i % 10 + 48);
-        _putchar(':');
-        _putchar(j / 10 + 48);
-        _putchar(j % 10 + 48);
-        _putchar('\n');
-    }
-   }
-
+	for (i = 0; i < 24; i++)
+	{
+		for (j = 0; j < 60; j++)
+		{
+			_putchar(i / 10 + 48);
+			_putchar(i % 10 + 48);
+			_putchar(':');
+			_putchar(j / 10 + 48);
+			_putchar(j % 10 + 48);
+			_putchar('\n');
+		}
+	}
 }
 
