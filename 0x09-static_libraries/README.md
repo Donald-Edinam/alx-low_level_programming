@@ -1,14 +1,41 @@
-# Static library in C 
-In C and C++ programming, a static library is a collection of object files that are combined into a single file. The object files in a static library contain compiled code and data that can be used by multiple programs.
+# C - Static libraries
 
-Static libraries are created using the ar (archive) utility, which combines the object files into a single file with a .a file extension. The object files in the static library can be compiled from source code written in C or C++, or they can be object files that have been compiled from other languages.
+In this project, I learned what static libraries are and practiced creating and
+using them with `ar`, `ranlib`, and `nm`.
 
-Static libraries are useful because they allow you to reuse code and data in multiple programs without having to recompile the code each time. This can save time and make it easier to maintain your codebase, because you only have to update the static library if you want to change the code or data that it contains.
+## Tests :heavy_check_mark:
 
-To use a static library in a program, you need to link the library with the program using the -l flag when compiling the program. For example, if you have a static library called mylib.a, you can link it to your program like this:
+* [tests](./tests): Folder of test files. Provided by Holberton School.
 
-Copy code
+## Tasks :page_with_curl:
 
-gcc -o myprogram myprogram.c -lmylib
+* **0. A library is not a luxury but one of the necessities of life**
+  * [libmy.a](./libmy.a): C Static library containing all the functions
+  listed below:
+    * `int _putchar(char c);`
+    * `int _islower(int c);`
+    * `int _isalpha(int c);`
+    * `int _abs(int n);`
+    * `int _isupper(int c);`
+    * `int _isdigit(int c);`
+    * `int _strlen(char *s);`
+    * `void _puts(char *s);`
+    * `char *_strcpy(char *dest, char *src);`
+    * `int _atoi(char *s);`
+    * `char *_strcat(char *dest, char *src);`
+    * `char *_strncat(char *dest, char *src, int n);`
+    * `char *_strncpy(char *dest, char *src, int n);`
+    * `int _strcmp(char *s1, char *s2);`
+    * `char *_memset(char *s, char b, unsigned int n);`
+    * `char *_memcpy(char *dest, char *src, unsigned int n);`
+    * `char *_strchr(char *s, char c);`
+    * `unsigned int _strspn(char *s, char *accept);`
+    * `char *_strpbrk(char *s, char *accept);`
+    * `char *_strstr(char *haystack, char *needle);`
 
-This will link the static library mylib.a to your program myprogram when it is compiled.
+  * [main.h](./main.h): Header file containing the prototypes of all functions
+  included in `libholberton.a`.
+
+* **1. Without libraries what have we? We have no past and no future**
+  * [create_static_lib.sh](./create_static_lib.sh): Bash script that creates a static
+  library called `liball.a` from all the `.c` files in the current directory.
